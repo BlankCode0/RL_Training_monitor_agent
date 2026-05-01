@@ -1,0 +1,293 @@
+[
+  {
+    "step": 50,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are in the early training phase (first 1-1.5 epochs), so we are lenient. Loss is high and dropping rapidly, eval loss is fluctuating, reward margin is small but growing, and reward accuracy is climbing from 0.50 toward 0.75.",
+    "detected_issues": [],
+    "recommendation": "Continue training.",
+    "stop_reason": "",
+    "ignored_stop": false
+  },
+  {
+    "step": 100,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are past the early phase (first 1-1.5 epochs). Train loss has stabilized at 0.64, and eval loss is stable at 0.64. Reward margin is moderate at 0.17. Reward accuracy has stabilized at 0.6. Both chosen and rejected rewards stay in a reasonable range. No divergence between train and eval metrics.",
+    "detected_issues": [
+      "eval_loss rose from 0.68 to 0.64"
+    ],
+    "recommendation": "Continue training.",
+    "stop_reason": null,
+    "ignored_stop": false
+  },
+  {
+    "step": 150,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are past the early phase (first 400 steps). Loss is decreasing, margin is moderate (0.4632), and reward accuracy is stable (68.12%). Eval loss is stable (0.6485).",
+    "detected_issues": [
+      "Reward margin is moderate, but slightly above the ideal range"
+    ],
+    "recommendation": "Continue training with the current hyperparameters.",
+    "stop_reason": "",
+    "ignored_stop": false
+  },
+  {
+    "step": 200,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are past the early phase (first 1-1.5 epochs). Train loss has stabilized (0.5816-0.5822), and eval loss is stable (0.6220-0.6485). Reward margin is moderate (0.3551-0.5201). Reward accuracy has stabilized between 0.6032-0.6448. Both chosen and rejected rewards stay in a reasonable range (-1.1894 to -0.7267).",
+    "detected_issues": [
+      "eval_loss rose from 0.6377 to 0.6485"
+    ],
+    "recommendation": "Continue training.",
+    "stop_reason": "",
+    "ignored_stop": false
+  },
+  {
+    "step": 250,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are past the early phase (first 1-1.5 epochs). Train loss has stabilized, and eval loss is stable. Reward margin is moderate (0.1690-0.4469 range). Reward accuracy has stabilized between 58.75% and 70.00%. Both chosen and rejected rewards stay in a reasonable range (-1.1894 to -0.3954).",
+    "detected_issues": [
+      "eval_loss rose from 0.6377 to 0.6485",
+      "eval_loss rose from 0.6485 to 0.6220"
+    ],
+    "recommendation": "Continue training.",
+    "stop_reason": null,
+    "ignored_stop": false
+  },
+  {
+    "step": 300,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are past the early phase (first 1-1.5 epochs). Train loss has stabilized, and eval loss is stable. Reward margin is moderate (0.3225-0.9679 range). Reward accuracy has stabilized between 59.38-83.75%. Both chosen and rejected rewards stay in a reasonable range (-1.3962 to +1.3962).",
+    "detected_issues": [
+      "eval_loss rose from 0.6485 to 0.6315"
+    ],
+    "recommendation": "Continue training",
+    "stop_reason": null,
+    "ignored_stop": false
+  },
+  {
+    "step": 350,
+    "status": "stop",
+    "confidence": 0.9,
+    "reasoning": "We are past the early phase (first 1-1.5 epochs). The recent trend shows eval loss increasing for 3 consecutive checks, which is a critical issue. Additionally, the margin is high (1.1-1.2 range), and the reward accuracy is high (78-83% range). These are warning signs of overfitting.",
+    "detected_issues": [
+      "eval loss increasing for 3 consecutive checks",
+      "high margin",
+      "high reward accuracy"
+    ],
+    "recommendation": "Stop training and re-evaluate the model.",
+    "stop_reason": "eval loss has increased for 3 or more consecutive eval checks",
+    "ignored_stop": false
+  },
+  {
+    "step": 400,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are past the early phase (first 1-1.5 epochs). Train loss has stabilized, and eval loss is stable. Reward margin is moderate (1.0-2.0 range). Reward accuracy has stabilized between 0.65-0.82. Both chosen and rejected rewards stay in a reasonable range (-2.0 to +2.0).",
+    "detected_issues": [
+      "eval_loss rose from 0.6148 to 0.6722",
+      "eval_loss rose from 0.6315 to 0.6722"
+    ],
+    "recommendation": "Continue training.",
+    "stop_reason": null,
+    "ignored_stop": true
+  },
+  {
+    "step": 450,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are past the early phase (first 1-1.5 epochs). Train loss has stabilized (0.42-0.46), eval loss is stable (0.63-0.67), reward margin is moderate (0.9-1.2), and reward accuracy has stabilized (76-83%).",
+    "detected_issues": [
+      "eval_loss rose from 0.63 to 0.67"
+    ],
+    "recommendation": "Continue training.",
+    "stop_reason": "",
+    "ignored_stop": true
+  },
+  {
+    "step": 500,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are past the early phase (first 1-1.5 epochs). Train loss has stabilized (0.4238-0.5117), and eval loss is stable (0.6303-0.6548). Reward margin is moderate (0.9591-1.0470 range), and reward accuracy has stabilized between 76.25-84.38%. Both chosen and rejected rewards stay in a reasonable range (-2.0 to +2.0).",
+    "detected_issues": [
+      "eval_loss rose from 0.6427 to 0.6548"
+    ],
+    "recommendation": "Continue training.",
+    "stop_reason": null,
+    "ignored_stop": true
+  },
+  {
+    "step": 550,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are past the early phase (epoch 1.42 to 1.95). Train loss has stabilized, and eval loss is stable. Reward margin is moderate (0.835-1.0268 range). Reward accuracy has stabilized between 0.6230-0.6548. Both chosen and rejected rewards stay in a reasonable range (-2.0 to +2.0).",
+    "detected_issues": [
+      "eval_loss rose from 0.6427 to 0.6507, then to 0.6320"
+    ],
+    "recommendation": "Continue training.",
+    "stop_reason": "",
+    "ignored_stop": true
+  },
+  {
+    "step": 600,
+    "status": "stop",
+    "confidence": 0.9,
+    "reasoning": "We are past the early phase (epoch 1.60). Train loss is decreasing, but eval loss has increased for 3 consecutive eval checks. Eval loss is 0.6763, which is more than 0.15 above its lowest observed value in the log window (0.6507).",
+    "detected_issues": [
+      "eval loss increasing for 3 consecutive checks",
+      "eval loss is more than 0.15 above its lowest observed value"
+    ],
+    "recommendation": "Stop training",
+    "stop_reason": "eval loss has increased for 3 or more consecutive eval checks",
+    "ignored_stop": true
+  },
+  {
+    "step": 650,
+    "status": "stop",
+    "confidence": 0.9,
+    "reasoning": "We are past the early phase (epoch 1.78 to 2.31). Train loss is decreasing, but eval loss has increased for 3 consecutive eval checks. Eval loss is 0.7112, which is more than 0.15 above its lowest observed value in the log window (0.6303).",
+    "detected_issues": [
+      "eval loss increasing for 3 consecutive checks",
+      "eval loss is more than 0.15 above its lowest observed value"
+    ],
+    "recommendation": "Stop training",
+    "stop_reason": "eval loss has increased for 3 or more consecutive eval checks",
+    "ignored_stop": true
+  },
+  {
+    "step": 700,
+    "status": "stop",
+    "confidence": 0.9,
+    "reasoning": "We are past the early phase (epoch 2.48). Train loss is 0.2507, eval loss is 0.7174, and the train-eval loss gap is 0.4667. Eval loss has increased for 3 consecutive eval checks. Reward margin is 2.2604, which is below the threshold of 3.0. However, the eval loss is above its lowest observed value in the log window by 0.0854.",
+    "detected_issues": [
+      "eval loss increasing for 3 consecutive checks",
+      "train-eval loss gap is growing"
+    ],
+    "recommendation": "Stop training",
+    "stop_reason": "eval loss has increased for 3 or more consecutive eval checks",
+    "ignored_stop": true
+  },
+  {
+    "step": 750,
+    "status": "stop",
+    "confidence": 0.9,
+    "reasoning": "We are past the early phase (epoch 2.13). Train loss is 0.2723, eval loss is 0.7180, and reward accuracy is 0.6369. Eval loss has increased for 3 consecutive eval checks, and the train-eval loss gap is growing.",
+    "detected_issues": [
+      "Eval loss increasing for 3 consecutive checks"
+    ],
+    "recommendation": "Stop training",
+    "stop_reason": "Eval loss has increased for 3 or more consecutive eval checks",
+    "ignored_stop": true
+  },
+  {
+    "step": 800,
+    "status": "stop",
+    "confidence": 0.9,
+    "reasoning": "We are past the early phase (first 1-1.5 epochs). The eval loss has increased for 3 consecutive eval checks, which is a critical issue. Additionally, the margin is decreasing, and the accuracy is also decreasing. These are warning signs that the model may be overfitting or not learning effectively.",
+    "detected_issues": [
+      "eval loss increasing for 3 consecutive checks",
+      "margin decreasing",
+      "accuracy decreasing"
+    ],
+    "recommendation": "Stop training and re-evaluate the model's performance.",
+    "stop_reason": "eval loss has increased for 3 or more consecutive eval checks",
+    "ignored_stop": true
+  },
+  {
+    "step": 850,
+    "status": "stop",
+    "confidence": 0.8,
+    "reasoning": "We are past the early phase (first 1-1.5 epochs). Train loss has stabilized, but eval loss has increased for 3 consecutive eval checks (0.7180, 0.7966, 0.7452). Reward margin is below 3.0, but reward accuracy is above 0.93 sustained over multiple entries (91.22%, 91.88%, 92.50%).",
+    "detected_issues": [
+      "eval_loss rose from 0.7180 to 0.7966, then to 0.7452",
+      "reward accuracy is sustained above 0.93 for 3+ consecutive logged entries"
+    ],
+    "recommendation": "Stop training.",
+    "stop_reason": "eval_loss has increased for 3 or more consecutive eval checks",
+    "ignored_stop": true
+  },
+  {
+    "step": 900,
+    "status": "stop",
+    "confidence": 0.9,
+    "reasoning": "We are past the early phase (first 1-1.5 epochs). Train loss is 0.1853, eval loss is 0.8378, and the train-eval loss gap is significant. Reward margin is 2.7615, which is below the threshold of 3.0. However, reward accuracy is 91.25%, which is above the threshold of 0.93. Both chosen and rejected rewards have drifted below -3.0. Train loss is above 0.15 while eval loss is above 0.75, indicating a severe train-eval gap.",
+    "detected_issues": [
+      "severe train-eval loss gap",
+      "reward accuracy above 0.93",
+      "chosen and rejected rewards below -3.0"
+    ],
+    "recommendation": "Stop training",
+    "stop_reason": "severe train-eval loss gap",
+    "ignored_stop": true
+  },
+  {
+    "step": 950,
+    "status": "stop",
+    "confidence": 0.9,
+    "reasoning": "We are past the early phase (first 1-1.5 epochs). The recent trend shows eval loss increasing for 3 consecutive checks. Additionally, the margin is decreasing and accuracy is also decreasing. These are warning signs of overfitting.",
+    "detected_issues": [
+      "eval loss increasing for 3 consecutive checks",
+      "margin decreasing",
+      "accuracy decreasing"
+    ],
+    "recommendation": "Stop training and re-evaluate the model.",
+    "stop_reason": "Eval loss has increased for 3 or more consecutive eval checks",
+    "ignored_stop": true
+  },
+  {
+    "step": 1000,
+    "status": "stop",
+    "confidence": 0.9,
+    "reasoning": "We are past the early phase (epoch 3.01). Train loss is 0.1436, eval loss is 0.8361, and the train-eval loss gap is large. Eval loss has increased for 3 consecutive eval checks. Reward margin is 2.9506, which is below the threshold for 'stop'. However, the train-eval loss gap and eval loss increase are critical issues.",
+    "detected_issues": [
+      "eval_loss rose from 0.7452 to 0.8361",
+      "train-eval loss gap is large"
+    ],
+    "recommendation": "Stop training",
+    "stop_reason": "eval_loss has increased for 3 or more consecutive eval checks",
+    "ignored_stop": true
+  },
+  {
+    "step": 1050,
+    "status": "stop",
+    "confidence": 0.9,
+    "reasoning": "We are past the early phase (epoch 3.19). Train loss is stable, but eval loss has increased for 3 consecutive eval checks (0.8378, 0.8445, 0.8469). Reward margin is moderate (2.8-3.1 range), but reward accuracy is sustained above 0.93 for 3+ consecutive logged entries.",
+    "detected_issues": [
+      "eval_loss rose from 0.8378 to 0.8469",
+      "reward accuracy is sustained above 0.93"
+    ],
+    "recommendation": "Stop training",
+    "stop_reason": "eval_loss has increased for 3 or more consecutive eval checks",
+    "ignored_stop": true
+  },
+  {
+    "step": 1100,
+    "status": "stop",
+    "confidence": 0.9,
+    "reasoning": "We are past the early phase (epoch 3.37), and the recent trends show a decrease in loss and margin, but an increase in eval loss for 3 consecutive checks. Additionally, the reward margin is not a concern, but the eval loss has increased from 0.8445 to 0.8564, and the accuracy has decreased. The eval loss has also increased from its lowest observed value in the log window.",
+    "detected_issues": [
+      "eval loss increasing for 3 consecutive checks",
+      "eval loss rose from 0.8445 to 0.8564"
+    ],
+    "recommendation": "Stop training",
+    "stop_reason": "eval loss has increased for 3 or more consecutive eval checks",
+    "ignored_stop": true
+  },
+  {
+    "step": 1150,
+    "status": "stop",
+    "confidence": 0.9,
+    "reasoning": "We are past the early phase (epoch 3.55). Train loss is decreasing, but eval loss has increased for 3 consecutive eval checks. Eval loss is 0.8361, 0.8469, and 0.8564, indicating a rise from the lowest observed value of 0.6230. Reward margin is 2.9506, which is below the threshold of 3.0. Reward accuracy is 96.88%, 96.25%, and 96.25%, which is below the threshold of 0.93. However, the primary reason for stopping is the eval loss increase.",
+    "detected_issues": [
+      "eval loss increasing for 3 consecutive checks"
+    ],
+    "recommendation": "Stop training and investigate the cause of the eval loss increase.",
+    "stop_reason": "eval loss has increased for 3 or more consecutive eval checks",
+    "ignored_stop": true
+  }
+]

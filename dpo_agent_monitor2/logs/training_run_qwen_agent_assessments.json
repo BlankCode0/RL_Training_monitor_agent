@@ -1,0 +1,156 @@
+[
+  {
+    "step": 50,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are in the early phase of training (steps 10-50, epoch 0.04-0.18). The loss is high and dropping rapidly, which is normal. The reward margin is small but growing, and the reward accuracy is climbing. The eval loss and eval accuracy are only available for one entry, so it's too early to assess overfitting. The recent trends show a decrease in loss and margin, and a decrease in accuracy, but these are normal fluctuations in the early phase.",
+    "detected_issues": [],
+    "recommendation": "Continue training and monitor the metrics for the next few hundred steps.",
+    "stop_reason": null,
+    "ignored_stop": false
+  },
+  {
+    "step": 100,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are in the early phase of training (first 100 steps, roughly first 0.36 epochs), so we are lenient with the metrics. The loss is high and dropping rapidly, which is normal. The eval loss is stable, and the reward margin is small but growing. The reward accuracy is climbing from 0.50 toward 0.60. The chosen and rejected rewards are near zero and starting to separate. The recent trends show a decreasing loss and a decreasing margin, which is expected in the early phase. The accuracy change is also decreasing, but this is not a concern in the early phase.",
+    "detected_issues": [],
+    "recommendation": "Continue training and monitor the metrics.",
+    "stop_reason": null,
+    "ignored_stop": false
+  },
+  {
+    "step": 150,
+    "status": "stop",
+    "confidence": 0.95,
+    "reasoning": "First, note the current epoch/step is around 0.53. Key metric values include a sudden spike in loss to 19.7381 at step 140, followed by NaN values for rewards and margin. The eval_loss at step 150 is NaN, indicating a catastrophic failure. Comparing against thresholds, the loss spike and NaN values exceed all acceptable limits. The verdict is that training has failed due to a catastrophic event.",
+    "detected_issues": [
+      "Loss spike to 19.7381 at step 140",
+      "NaN values for rewards and margin at steps 140 and 150",
+      "NaN eval_loss at step 150"
+    ],
+    "recommendation": "Restart training with adjusted hyperparameters or model architecture to prevent similar failures",
+    "stop_reason": "Catastrophic failure indicated by NaN values and extreme loss spike",
+    "ignored_stop": false
+  },
+  {
+    "step": 200,
+    "status": "stop",
+    "confidence": 1.0,
+    "reasoning": "The training logs show a catastrophic failure with NaN values in the loss, margin, and rewards starting from step 140. This indicates a collapse of the training process. The eval_loss is also NaN at steps 150 and 200, further confirming the issue. The recent trends also show no change in loss and accuracy, and a NaN change in margin, which is not a healthy sign.",
+    "detected_issues": [
+      "NaN values in loss, margin, and rewards",
+      "NaN eval_loss at multiple steps"
+    ],
+    "recommendation": "Restart the training process with a different set of hyperparameters or initial conditions to avoid the collapse.",
+    "stop_reason": "Catastrophic failure with NaN values in key metrics",
+    "ignored_stop": true
+  },
+  {
+    "step": 250,
+    "status": "stop",
+    "confidence": 1.0,
+    "reasoning": "The training log shows a catastrophic failure with NaN values in the loss, margin, and rewards starting from step 140. This indicates a severe issue with the training process. The presence of NaN values in the rewards and the loss suggests that the model is not learning properly and is instead producing undefined values. The eval_loss is also NaN, which further supports the conclusion that the training has failed. The recent trends also show no change in loss and accuracy, but a NaN change in margin, which is not a meaningful metric in this case due to the NaN values.",
+    "detected_issues": [
+      "NaN values in loss, margin, and rewards",
+      "eval_loss is NaN"
+    ],
+    "recommendation": "Restart the training process with a different set of hyperparameters or check the data for any issues that may be causing the NaN values.",
+    "stop_reason": "Catastrophic failure with NaN values in the loss, margin, and rewards",
+    "ignored_stop": true
+  },
+  {
+    "step": 300,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are in the early phase of training (steps 150-300, epochs 0.53-1.06), where high loss and rapid changes are normal. The loss is stable at 0.0, and the eval loss is not available for comparison. The reward margin and accuracy are also stable at 0.0 and 0.0%, respectively. Given the early phase, these metrics are not diagnostic, and the training appears to be proceeding as expected.",
+    "detected_issues": [],
+    "recommendation": "Continue training and monitor the metrics for any unusual changes.",
+    "stop_reason": null,
+    "ignored_stop": true
+  },
+  {
+    "step": 350,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are in the early phase of training (steps 200-350, roughly 0.71-1.24 epochs), where high loss and fluctuating metrics are normal. The loss is stable at 0.0, and the eval loss is not available for comparison. The reward margin and accuracy are also stable at 0.0 and 0.0%, respectively. There are no signs of catastrophic failure, such as NaN or extreme spikes.",
+    "detected_issues": [],
+    "recommendation": "Continue training and monitor the metrics for any signs of overfitting or divergence.",
+    "stop_reason": null,
+    "ignored_stop": true
+  },
+  {
+    "step": 400,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are in the early phase of training (steps 250-400, roughly 0.89-1.42 epochs), where high loss and fluctuating metrics are normal. The loss is stable at 0.0, and the eval loss is not available for comparison. The reward margin and accuracy are at the starting point of 0.0 and 0.0%, respectively. Given the early phase, these metrics are not diagnostic, and the training appears to be in a healthy state.",
+    "detected_issues": [],
+    "recommendation": "Continue training and monitor metrics for stabilization and improvement.",
+    "stop_reason": null,
+    "ignored_stop": true
+  },
+  {
+    "step": 450,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are in the early phase of training (steps 300-450, roughly 1.06-1.60 epochs), where high loss and rapidly dropping loss are normal. The loss is stable at 0.0000, and the eval loss is not available for comparison. The reward margin is 0.0000, and the reward accuracy is 0.00%, which are expected in the early phase. There are no signs of catastrophic failure, such as NaN or extreme spikes.",
+    "detected_issues": [],
+    "recommendation": "Continue training and monitor the metrics for any signs of issues.",
+    "stop_reason": null,
+    "ignored_stop": true
+  },
+  {
+    "step": 500,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are in the early phase of training (steps 350-500, roughly 1.24-1.78 epochs), where high loss and fluctuating metrics are normal. The loss is stable at 0.0, and the eval loss is not available for comparison. The reward margin and accuracy are also stable at 0.0 and 0.0%, respectively. There are no signs of catastrophic failure, such as NaN or extreme spikes.",
+    "detected_issues": [],
+    "recommendation": "Continue training and monitor metrics for signs of overfitting or underfitting.",
+    "stop_reason": null,
+    "ignored_stop": true
+  },
+  {
+    "step": 550,
+    "status": "stop",
+    "confidence": 1.0,
+    "reasoning": "The training logs show no progress in terms of loss, margin, or reward accuracy. The loss is consistently 0.0, and the margin is also 0.0, indicating no separation between chosen and rejected rewards. The reward accuracy is 0.0%, which is the lowest possible value. The eval loss is not available, but the lack of progress in other metrics is sufficient to conclude that the training is not healthy. The recent trends also show no improvement, with the loss and accuracy not changing, and the margin change being NaN. Given the lack of progress and the consistently low values of key metrics, the training should be stopped.",
+    "detected_issues": [
+      "No progress in loss",
+      "No separation between chosen and rejected rewards",
+      "Low reward accuracy"
+    ],
+    "recommendation": "Stop the training and re-evaluate the model and training parameters",
+    "stop_reason": "Lack of progress in key metrics",
+    "ignored_stop": true
+  },
+  {
+    "step": 600,
+    "status": "stop",
+    "confidence": 1.0,
+    "reasoning": "The training logs show that the loss is consistently 0.0, and the learning rate is decreasing. The reward margin is 0.0, and the reward accuracy is 0.0%. The eval loss is not available, but the eval accuracy is 0.0%. The recent trends show no change in loss, margin, or accuracy. The model is not learning, and the training is not making progress. The lack of change in metrics and the zero values for rewards and accuracy indicate a catastrophic failure, which is a clear reason to stop the training.",
+    "detected_issues": [
+      "Loss is consistently 0.0",
+      "Reward margin is 0.0",
+      "Reward accuracy is 0.0%",
+      "No change in metrics"
+    ],
+    "recommendation": "Check the model architecture, data, and training parameters to identify the cause of the issue and restart the training with the necessary corrections",
+    "stop_reason": "Catastrophic failure, no progress in training",
+    "ignored_stop": true
+  },
+  {
+    "step": 650,
+    "status": "stop",
+    "confidence": 1.0,
+    "reasoning": "The training loss is consistently 0.0, and the learning rate is decreasing, but the model is not learning as the reward accuracy is stuck at 0.0%. The eval_loss and eval_accuracy are also not changing, indicating no progress in training. The margin is 0.0, and the rewards are not separating, which is a sign of a problem. Given these metrics, the training is not making progress and should be stopped.",
+    "detected_issues": [
+      "Training loss is 0.0 and not changing",
+      "Reward accuracy is stuck at 0.0%",
+      "Eval_loss and eval_accuracy are not changing",
+      "Margin is 0.0 and rewards are not separating"
+    ],
+    "recommendation": "Stop the training and investigate the cause of the issue. Check the data, model, and hyperparameters to ensure they are correct and suitable for the task.",
+    "stop_reason": "No progress in training, and the model is not learning.",
+    "ignored_stop": true
+  }
+]

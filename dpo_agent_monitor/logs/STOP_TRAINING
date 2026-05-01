@@ -1,0 +1,5 @@
+{
+  "step": 1180,
+  "reason": "Eval loss increased for 3 consecutive checks and margin exceeds 3.0",
+  "triggered_by": "agent"
+}

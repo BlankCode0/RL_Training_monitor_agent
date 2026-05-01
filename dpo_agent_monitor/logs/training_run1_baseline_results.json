@@ -1,0 +1,67 @@
+[
+  {
+    "baseline": "no_stopping",
+    "stop_step": null,
+    "reason": "No early stopping applied \u2014 trained to completion"
+  },
+  {
+    "baseline": "eval_loss_patience_3",
+    "stop_step": 400,
+    "reason": "Eval loss increased for 3 consecutive checks. Best eval loss: 0.6148, current: 0.6427"
+  },
+  {
+    "baseline": "eval_loss_patience_5",
+    "stop_step": 500,
+    "reason": "Eval loss increased for 5 consecutive checks. Best eval loss: 0.6148, current: 0.6303"
+  },
+  {
+    "baseline": "margin_threshold_3.0",
+    "stop_step": 880,
+    "reason": "Reward margin 3.3530 exceeded threshold 3.0"
+  },
+  {
+    "baseline": "margin_threshold_5.0",
+    "stop_step": null,
+    "reason": "Reward margin never exceeded 5.0"
+  },
+  {
+    "baseline": "acc_saturation_0.95",
+    "stop_step": null,
+    "reason": "Reward accuracy never saturated at 0.95 for 5 steps"
+  },
+  {
+    "baseline": "acc_saturation_0.98",
+    "stop_step": null,
+    "reason": "Reward accuracy never saturated at 0.98 for 3 steps"
+  },
+  {
+    "baseline": "loss_plateau_w10",
+    "stop_step": 230,
+    "reason": "Loss improvement over last 10 entries: -0.015056 (below threshold 0.001)"
+  },
+  {
+    "baseline": "train_eval_divergence_0.3",
+    "stop_step": 600,
+    "reason": "Train-eval loss gap: 0.4041 exceeded threshold 0.3. Train loss: 0.2723, Eval loss: 0.6763"
+  },
+  {
+    "baseline": "train_eval_divergence_0.5",
+    "stop_step": 800,
+    "reason": "Train-eval loss gap: 0.5196 exceeded threshold 0.5. Train loss: 0.2770, Eval loss: 0.7966"
+  },
+  {
+    "baseline": "combined_heuristic",
+    "stop_step": 350,
+    "reason": "Multiple signals triggered: eval_loss rising for 2 checks; train-eval gap=0.226 > 0.2"
+  },
+  {
+    "baseline": "ema_eval_loss_a0.3_p3",
+    "stop_step": 700,
+    "reason": "EMA of eval loss rising for 3 consecutive checks. EMA: 0.6393 \u2192 0.6833"
+  },
+  {
+    "baseline": "ema_eval_loss_a0.5_p3",
+    "stop_step": 700,
+    "reason": "EMA of eval loss rising for 3 consecutive checks. EMA: 0.6357 \u2192 0.7005"
+  }
+]

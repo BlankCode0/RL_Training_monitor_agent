@@ -1,0 +1,648 @@
+[
+  {
+    "step": 50,
+    "status": "healthy",
+    "confidence": 1.0,
+    "reasoning": "Epoch 0.178 is in early phase. Checking thresholds: eval_loss_rise, margin_latest, margin_velocity_last10, accuracy_latest, chosen and rejected rewards in bounds.",
+    "detected_issues": [],
+    "recommendation": "CONTINUE",
+    "stop_reason": "",
+    "ignored_stop": false,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.6818565726280212
+      ],
+      "eval_loss_min": 0.6819,
+      "eval_loss_latest": 0.6819,
+      "eval_loss_rise": 0.0,
+      "eval_loss_consecutive_increases": 0,
+      "train_loss_latest": 0.6836,
+      "train_eval_gap": -0.0017,
+      "current_step": 50,
+      "current_epoch": 0.178
+    }
+  },
+  {
+    "step": 100,
+    "status": "healthy",
+    "confidence": 1.0,
+    "reasoning": "Epoch 0.356 is past early phase. Checking thresholds: eval_loss_consecutive_increases, eval_loss_rise, margin_latest, margin_velocity_last10, accuracy_latest, chosen and rejected rewards in bounds.",
+    "detected_issues": [],
+    "recommendation": "CONTINUE",
+    "stop_reason": "",
+    "ignored_stop": false,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.6818565726280212,
+        0.6377164125442505
+      ],
+      "eval_loss_min": 0.6377,
+      "eval_loss_latest": 0.6377,
+      "eval_loss_rise": 0.0,
+      "eval_loss_consecutive_increases": 0,
+      "train_loss_latest": 0.6467,
+      "train_eval_gap": -0.009,
+      "current_step": 100,
+      "current_epoch": 0.356
+    }
+  },
+  {
+    "step": 150,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "Epoch 0.533 is past early phase. Checking thresholds: eval_loss_consecutive_increases, eval_loss_rise, margin_latest, margin_velocity_last10, accuracy_latest, train_eval_gap, chosen and rejected rewards.",
+    "detected_issues": [
+      "eval_loss_rise: 0.0108 CROSSED 0.15-above-minimum threshold (min was 0.6377) \u2014 This is a warning sign, but not yet a stop condition. We'll continue monitoring.",
+      "eval_loss_consecutive_increases: 1 CROSSED 3 threshold \u2014 This is a warning sign, but not yet a stop condition. We'll continue monitoring."
+    ],
+    "recommendation": "CONTINUE training",
+    "stop_reason": "",
+    "ignored_stop": false,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.6818565726280212,
+        0.6377164125442505,
+        0.6485207676887512
+      ],
+      "eval_loss_min": 0.6377,
+      "eval_loss_latest": 0.6485,
+      "eval_loss_rise": 0.0108,
+      "eval_loss_consecutive_increases": 1,
+      "train_loss_latest": 0.5816,
+      "train_eval_gap": 0.0669,
+      "current_step": 150,
+      "current_epoch": 0.533
+    }
+  },
+  {
+    "step": 200,
+    "status": "healthy",
+    "confidence": 1.0,
+    "reasoning": "Epoch 0.711 is past early phase. Checking thresholds: eval_loss_consecutive_increases, eval_loss_rise, margin_latest, margin_velocity_last10, accuracy_latest, train_eval_gap, chosen and rejected rewards in bounds.",
+    "detected_issues": [],
+    "recommendation": "CONTINUE",
+    "stop_reason": "",
+    "ignored_stop": false,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.6818565726280212,
+        0.6377164125442505,
+        0.6485207676887512,
+        0.6220443248748779
+      ],
+      "eval_loss_min": 0.622,
+      "eval_loss_latest": 0.622,
+      "eval_loss_rise": 0.0,
+      "eval_loss_consecutive_increases": 0,
+      "train_loss_latest": 0.5822,
+      "train_eval_gap": 0.0399,
+      "current_step": 200,
+      "current_epoch": 0.711
+    }
+  },
+  {
+    "step": 250,
+    "status": "healthy",
+    "confidence": 1.0,
+    "reasoning": "Epoch 0.889 is past early phase. Checking thresholds: eval_loss_consecutive_increases, eval_loss_rise, margin_latest, margin_velocity_last10, accuracy_latest, train_eval_gap, chosen and rejected rewards in bounds.",
+    "detected_issues": [],
+    "recommendation": "CONTINUE",
+    "stop_reason": "",
+    "ignored_stop": false,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.6377164125442505,
+        0.6485207676887512,
+        0.6220443248748779,
+        0.614778459072113
+      ],
+      "eval_loss_min": 0.6148,
+      "eval_loss_latest": 0.6148,
+      "eval_loss_rise": 0.0,
+      "eval_loss_consecutive_increases": 0,
+      "train_loss_latest": 0.5867,
+      "train_eval_gap": 0.0281,
+      "current_step": 250,
+      "current_epoch": 0.889
+    }
+  },
+  {
+    "step": 300,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "Epoch 1.064, step 300. In early phase. Checking thresholds.",
+    "detected_issues": [
+      "eval_loss_rise: 0.0167 CROSSED 0.15-above-minimum threshold (min was 0.6148) \u2014 eval loss is rising, but not at a concerning rate yet",
+      "eval_loss_consecutive_increases: 1 CROSSED 3 threshold \u2014 consecutive increases are low, but not a cause for concern"
+    ],
+    "recommendation": "CONTINUE",
+    "stop_reason": "",
+    "ignored_stop": false,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.6485207676887512,
+        0.6220443248748779,
+        0.614778459072113,
+        0.6315114498138428
+      ],
+      "eval_loss_min": 0.6148,
+      "eval_loss_latest": 0.6315,
+      "eval_loss_rise": 0.0167,
+      "eval_loss_consecutive_increases": 1,
+      "train_loss_latest": 0.4281,
+      "train_eval_gap": 0.2034,
+      "current_step": 300,
+      "current_epoch": 1.064
+    }
+  },
+  {
+    "step": 350,
+    "status": "warning",
+    "confidence": 0.5,
+    "reasoning": "Failed to parse agent response: {\n    \"status\": \"warning\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"Epoch 1.242, step 350. We are not in the early phase. \n    eval_loss_rise: 0.0574 CROSSED 0.15-above-minimum threshold (min was 0.6148) \n    eval_loss_consecutive_increases: 2 CROSSED 3 threshold \n    train_loss_latest: 0.4463 NOT CROSSED 0.15 threshold \n    train_eval_gap: 0.2259 NOT CROSSED 0.3 threshold \n    margin_latest: 1.1483 NOT CROSSED 3.0 threshold \n    margin_velocity_last10: -0.9837 NOT CROSSED 1.0 threshold \n    mar",
+    "detected_issues": [
+      "Agent response parsing failed"
+    ],
+    "recommendation": "Manual review recommended",
+    "stop_reason": "",
+    "ignored_stop": false,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.6220443248748779,
+        0.614778459072113,
+        0.6315114498138428,
+        0.672170877456665
+      ],
+      "eval_loss_min": 0.6148,
+      "eval_loss_latest": 0.6722,
+      "eval_loss_rise": 0.0574,
+      "eval_loss_consecutive_increases": 2,
+      "train_loss_latest": 0.4463,
+      "train_eval_gap": 0.2259,
+      "current_step": 350,
+      "current_epoch": 1.242
+    }
+  },
+  {
+    "step": 400,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "Epoch 1.42, step 400. We are not in the early phase. Checking thresholds: eval_loss_rise is 0.0279, which is below the 0.15 threshold. eval_loss_consecutive_increases is 0, which is below the 3 threshold. train_loss_latest is 0.4616, which is above the 0.15 threshold. train_eval_gap is 0.1811, which is above the 0.0 threshold. However, train_loss_latest is above 0.15, so the train-eval gap is not a concern. No issues detected.",
+    "detected_issues": [],
+    "recommendation": "Continue training",
+    "stop_reason": null,
+    "ignored_stop": false,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.614778459072113,
+        0.6315114498138428,
+        0.672170877456665,
+        0.6426588296890259
+      ],
+      "eval_loss_min": 0.6148,
+      "eval_loss_latest": 0.6427,
+      "eval_loss_rise": 0.0279,
+      "eval_loss_consecutive_increases": 0,
+      "train_loss_latest": 0.4616,
+      "train_eval_gap": 0.1811,
+      "current_step": 400,
+      "current_epoch": 1.42
+    }
+  },
+  {
+    "step": 450,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "Epoch 1.597 is past early phase. Checking thresholds: eval_loss_consecutive_increases, eval_loss_rise, margin_latest, margin_velocity_last10, accuracy_latest, train_eval_gap, chosen and rejected rewards.",
+    "detected_issues": [
+      "eval_loss_rise: 0.0192 CROSSED 0.15-above-minimum threshold (min was 0.63)",
+      "train_eval_gap: 0.1956 CROSSED 0.0 threshold (train < 0.15 and eval > 0.75)"
+    ],
+    "recommendation": "Continue training with caution.",
+    "stop_reason": "",
+    "ignored_stop": false,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.6315114498138428,
+        0.672170877456665,
+        0.6426588296890259,
+        0.650725781917572
+      ],
+      "eval_loss_min": 0.6315,
+      "eval_loss_latest": 0.6507,
+      "eval_loss_rise": 0.0192,
+      "eval_loss_consecutive_increases": 1,
+      "train_loss_latest": 0.4552,
+      "train_eval_gap": 0.1956,
+      "current_step": 450,
+      "current_epoch": 1.597
+    }
+  },
+  {
+    "step": 500,
+    "status": "healthy",
+    "confidence": 1.0,
+    "reasoning": "Epoch 1.775, step 500. In early phase. Checking thresholds.",
+    "detected_issues": [],
+    "recommendation": "CONTINUE",
+    "stop_reason": "",
+    "ignored_stop": false,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.672170877456665,
+        0.6426588296890259,
+        0.650725781917572,
+        0.6303365230560303
+      ],
+      "eval_loss_min": 0.6303,
+      "eval_loss_latest": 0.6303,
+      "eval_loss_rise": 0.0,
+      "eval_loss_consecutive_increases": 0,
+      "train_loss_latest": 0.4482,
+      "train_eval_gap": 0.1821,
+      "current_step": 500,
+      "current_epoch": 1.775
+    }
+  },
+  {
+    "step": 550,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "Epoch 1.953 is past early phase. Checking thresholds: eval_loss_consecutive_increases, eval_loss_rise, margin_latest, margin_velocity_last10, accuracy_latest, train_eval_gap, chosen and rejected rewards in bounds.",
+    "detected_issues": [
+      "eval_loss_rise: 0.0016 CROSSED 0.15-above-minimum threshold (min was 0.63)",
+      "eval_loss_consecutive_increases: 1 CROSSED 3 threshold (consecutive increases at end)"
+    ],
+    "recommendation": "CONTINUE",
+    "stop_reason": "",
+    "ignored_stop": false,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.6426588296890259,
+        0.650725781917572,
+        0.6303365230560303,
+        0.6319562792778015
+      ],
+      "eval_loss_min": 0.6303,
+      "eval_loss_latest": 0.632,
+      "eval_loss_rise": 0.0016,
+      "eval_loss_consecutive_increases": 1,
+      "train_loss_latest": 0.4433,
+      "train_eval_gap": 0.1887,
+      "current_step": 550,
+      "current_epoch": 1.953
+    }
+  },
+  {
+    "step": 600,
+    "status": "warning",
+    "confidence": 0.5,
+    "reasoning": "Failed to parse agent response: {\n    \"status\": \"warning\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"Epoch 2.128, step 600. We are no longer in the early phase. \n    eval_loss_rise: 0.046 CROSSED 0.15-above-minimum threshold (min was 0.63) \n    because eval_loss rose 0.046 above its minimum in this window. \n    eval_loss_consecutive_increases: 2 CROSSED 3 threshold because eval_loss \n    has increased consecutively for 2 checks at the end of the window. \n    train_loss_latest: 0.2723 NOT CROSSED 0.15 threshold because train_los",
+    "detected_issues": [
+      "Agent response parsing failed"
+    ],
+    "recommendation": "Manual review recommended",
+    "stop_reason": "",
+    "ignored_stop": false,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.650725781917572,
+        0.6303365230560303,
+        0.6319562792778015,
+        0.6763374209403992
+      ],
+      "eval_loss_min": 0.6303,
+      "eval_loss_latest": 0.6763,
+      "eval_loss_rise": 0.046,
+      "eval_loss_consecutive_increases": 2,
+      "train_loss_latest": 0.2723,
+      "train_eval_gap": 0.4041,
+      "current_step": 600,
+      "current_epoch": 2.128
+    }
+  },
+  {
+    "step": 650,
+    "status": "stop",
+    "confidence": 1.0,
+    "reasoning": "Epoch 2.306, step 650. In the early phase, loss is high and dropping rapidly, but eval loss is fluctuating slightly. However, eval loss has risen by 0.0809, which is above the threshold of 0.15. Consecutive increases at the end of the window are 3, which is above the threshold of 3. Train-eval gap is 0.4551, but this is not a problem since train loss is above 0.15. Loss becomes NaN is not an issue here. Reward margin and accuracy are not provided, but eval loss has crossed the threshold.",
+    "detected_issues": [
+      "eval_loss: 0.7112 CROSSED 0.15-above-minimum threshold (min was 0.6303)",
+      "eval_loss_consecutive_increases: 3 CROSSED 3 threshold"
+    ],
+    "recommendation": "STOP training",
+    "stop_reason": "eval_loss: 0.7112 CROSSED 0.15-above-minimum threshold (min was 0.6303) and eval_loss_consecutive_increases: 3 CROSSED 3 threshold",
+    "ignored_stop": false,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.6303365230560303,
+        0.6319562792778015,
+        0.6763374209403992,
+        0.7112128138542175
+      ],
+      "eval_loss_min": 0.6303,
+      "eval_loss_latest": 0.7112,
+      "eval_loss_rise": 0.0809,
+      "eval_loss_consecutive_increases": 3,
+      "train_loss_latest": 0.2561,
+      "train_eval_gap": 0.4551,
+      "current_step": 650,
+      "current_epoch": 2.306
+    }
+  },
+  {
+    "step": 700,
+    "status": "stop",
+    "confidence": 1.0,
+    "reasoning": "Epoch 2.484, step 700. In the early phase, eval_loss_consecutive_increases is 3, which CROSSED the threshold of >= 3. This is a stop condition.",
+    "detected_issues": [
+      "eval_loss_consecutive_increases: 3 CROSSED >= 3 (stop threshold)"
+    ],
+    "recommendation": "STOP training",
+    "stop_reason": "eval_loss_consecutive_increases >= 3",
+    "ignored_stop": true,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.6319562792778015,
+        0.6763374209403992,
+        0.7112128138542175,
+        0.7174363136291504
+      ],
+      "eval_loss_min": 0.632,
+      "eval_loss_latest": 0.7174,
+      "eval_loss_rise": 0.0855,
+      "eval_loss_consecutive_increases": 3,
+      "train_loss_latest": 0.2507,
+      "train_eval_gap": 0.4667,
+      "current_step": 700,
+      "current_epoch": 2.484
+    }
+  },
+  {
+    "step": 750,
+    "status": "stop",
+    "confidence": 1.0,
+    "reasoning": "Epoch 2.661, step 750. We are not in the early phase. Checking thresholds: eval_loss_consecutive_increases >= 3: 3 CROSSED 2, eval_loss_rise >= 0.15: 0.0417 CROSSED 0.15-above-minimum threshold (min was 0.6763), train_loss_latest < 0.15: 0.2433 CROSSED 0.15, train-eval gap > 0.0 when train < 0.15 and eval > 0.75: 0.4747 CROSSED 0.0 threshold. Most severe crossed threshold is eval_loss_consecutive_increases >= 3.",
+    "detected_issues": [
+      "eval_loss_consecutive_increases: 3 CROSSED 2",
+      "eval_loss_rise: 0.0417 CROSSED 0.15-above-minimum threshold (min was 0.6763)",
+      "train_loss_latest: 0.2433 CROSSED 0.15",
+      "train-eval gap: 0.4747 CROSSED 0.0 threshold"
+    ],
+    "recommendation": "STOP training",
+    "stop_reason": "eval_loss_consecutive_increases >= 3: 3 CROSSED 2",
+    "ignored_stop": true,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.6763374209403992,
+        0.7112128138542175,
+        0.7174363136291504,
+        0.7179932594299316
+      ],
+      "eval_loss_min": 0.6763,
+      "eval_loss_latest": 0.718,
+      "eval_loss_rise": 0.0417,
+      "eval_loss_consecutive_increases": 3,
+      "train_loss_latest": 0.2433,
+      "train_eval_gap": 0.4747,
+      "current_step": 750,
+      "current_epoch": 2.661
+    }
+  },
+  {
+    "step": 800,
+    "status": "stop",
+    "confidence": 1.0,
+    "reasoning": "Epoch 2.839, step 800. We are no longer in the early phase. Checking thresholds: eval_loss_consecutive_increases >= 3: 3 CROSSED 2, eval_loss_rise >= 0.15: 0.0854 CROSSED 0.15, train_loss_latest < 0.15: 0.277 CROSSED 0.15, train-eval gap > 0.0 when train < 0.15 and eval > 0.75: 0.5196 CROSSED 0.0. The most severe crossed threshold is eval_loss_consecutive_increases >= 3.",
+    "detected_issues": [
+      "eval_loss_consecutive_increases: 3 CROSSED 2",
+      "eval_loss_rise: 0.0854 CROSSED 0.15",
+      "train_loss_latest: 0.277 CROSSED 0.15",
+      "train-eval gap: 0.5196 CROSSED 0.0"
+    ],
+    "recommendation": "STOP training",
+    "stop_reason": "eval_loss_consecutive_increases >= 3: 3 CROSSED 2",
+    "ignored_stop": true,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.7112128138542175,
+        0.7174363136291504,
+        0.7179932594299316,
+        0.7965951561927795
+      ],
+      "eval_loss_min": 0.7112,
+      "eval_loss_latest": 0.7966,
+      "eval_loss_rise": 0.0854,
+      "eval_loss_consecutive_increases": 3,
+      "train_loss_latest": 0.277,
+      "train_eval_gap": 0.5196,
+      "current_step": 800,
+      "current_epoch": 2.839
+    }
+  },
+  {
+    "step": 850,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "Epoch 3.014, step 850. In early phase. Checking thresholds.",
+    "detected_issues": [
+      "eval_loss_rise: 0.0278 CROSSED 0.15-above-minimum threshold (min was 0.7174)",
+      "train_eval_gap: 0.4855 CROSSED 0.0 threshold (train < 0.15 and eval > 0.75)"
+    ],
+    "recommendation": "Continue training",
+    "stop_reason": "",
+    "ignored_stop": true,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.7174363136291504,
+        0.7179932594299316,
+        0.7965951561927795,
+        0.7452409267425537
+      ],
+      "eval_loss_min": 0.7174,
+      "eval_loss_latest": 0.7452,
+      "eval_loss_rise": 0.0278,
+      "eval_loss_consecutive_increases": 0,
+      "train_loss_latest": 0.2597,
+      "train_eval_gap": 0.4855,
+      "current_step": 850,
+      "current_epoch": 3.014
+    }
+  },
+  {
+    "step": 900,
+    "status": "stop",
+    "confidence": 0.8,
+    "reasoning": "Epoch 3.192, step 900. We are no longer in the early phase. Checking thresholds: eval_loss_consecutive_increases, eval_loss_rise, margin_latest, margin_velocity_last10, accuracy_latest, train_eval_gap, chosen_latest, rejected_latest, train_loss_latest, eval_loss_latest, Loss becomes NaN. eval_loss_consecutive_increases: 1 CROSSED threshold 3 (consecutive increases at end), eval_loss_rise: 0.1198 CROSSED threshold 0.15 (rise from minimum), train_eval_gap: 0.6526 CROSSED threshold 0.0 (train < 0.15 and eval > 0.75), chosen_latest: -2.1626 CROSSED threshold -3.0 (chosen rising AND rejected falling), margin_velocity_last10: 0.5315 CROSSED threshold 1.0 (margin velocity last 10 steps), train_loss_latest: 0.1853 CROSSED threshold 0.15 (train loss latest), eval_loss_latest: 0.8378 CROSSED threshold 0.75 (eval loss latest).",
+    "detected_issues": [
+      "eval_loss_consecutive_increases: 1 CROSSED threshold 3",
+      "eval_loss_rise: 0.1198 CROSSED threshold 0.15",
+      "train_eval_gap: 0.6526 CROSSED threshold 0.0",
+      "chosen_latest: -2.1626 CROSSED threshold -3.0",
+      "margin_velocity_last10: 0.5315 CROSSED threshold 1.0",
+      "train_loss_latest: 0.1853 CROSSED threshold 0.15",
+      "eval_loss_latest: 0.8378 CROSSED threshold 0.75"
+    ],
+    "recommendation": "STOP training",
+    "stop_reason": "eval_loss_rise: 0.1198 CROSSED threshold 0.15 (rise from minimum)",
+    "ignored_stop": true,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.7179932594299316,
+        0.7965951561927795,
+        0.7452409267425537,
+        0.8378386497497559
+      ],
+      "eval_loss_min": 0.718,
+      "eval_loss_latest": 0.8378,
+      "eval_loss_rise": 0.1198,
+      "eval_loss_consecutive_increases": 1,
+      "train_loss_latest": 0.1853,
+      "train_eval_gap": 0.6526,
+      "current_step": 900,
+      "current_epoch": 3.192
+    }
+  },
+  {
+    "step": 950,
+    "status": "warning",
+    "confidence": 0.5,
+    "reasoning": "Failed to parse agent response: {\n    \"status\": \"warning\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"Epoch 3.37, step 950. We are no longer in the early phase. \n    eval_loss_consecutive_increases: 2 CROSSED threshold of 3 (consecutive increases at end)\n    eval_loss_rise: 0.0992 CROSSED threshold of 0.15 (rise from minimum)\n    margin_latest: 2.9391 CROSSED threshold of 3.0 (margin_latest > 3.0)\n    margin_velocity_last10: -0.2671 NOT CROSSED threshold of 1.0 (margin_velocity_last10 >= 1.0)\n    accuracy_latest: 0.6131 CROSSED ",
+    "detected_issues": [
+      "Agent response parsing failed"
+    ],
+    "recommendation": "Manual review recommended",
+    "stop_reason": "",
+    "ignored_stop": true,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.7965951561927795,
+        0.7452409267425537,
+        0.8378386497497559,
+        0.8444851636886597
+      ],
+      "eval_loss_min": 0.7452,
+      "eval_loss_latest": 0.8445,
+      "eval_loss_rise": 0.0992,
+      "eval_loss_consecutive_increases": 2,
+      "train_loss_latest": 0.1427,
+      "train_eval_gap": 0.7018,
+      "current_step": 950,
+      "current_epoch": 3.37
+    }
+  },
+  {
+    "step": 1000,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "Current epoch is 3.548, which is past the early phase. Checking thresholds: eval_loss_consecutive_increases is 0, which is below the threshold of >= 3; eval_loss_rise is 0.0908, which is below the threshold of > 0.15; margin_latest is not provided, but margin_velocity_last10 is not provided either; margin_velocity_last5 is not provided; accuracy_latest is not provided; train_eval_gap is 0.6924, which is above the threshold of > 0.3 when train < 0.15 and eval > 0.75; chosen_latest and rejected_latest are not provided; train_loss_latest is 0.1436, which is above the threshold of < 0.15; Loss becomes NaN is not provided.",
+    "detected_issues": [
+      "eval_loss_rise: 0.0908 CROSSED 0.15-above-minimum threshold (min was 0.7452)",
+      "train_eval_gap: 0.6924 CROSSED 0.3 threshold when train < 0.15 and eval > 0.75"
+    ],
+    "recommendation": "Continue training with caution.",
+    "stop_reason": "",
+    "ignored_stop": true,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.7452409267425537,
+        0.8378386497497559,
+        0.8444851636886597,
+        0.8360848426818848
+      ],
+      "eval_loss_min": 0.7452,
+      "eval_loss_latest": 0.8361,
+      "eval_loss_rise": 0.0908,
+      "eval_loss_consecutive_increases": 0,
+      "train_loss_latest": 0.1436,
+      "train_eval_gap": 0.6924,
+      "current_step": 1000,
+      "current_epoch": 3.548
+    }
+  },
+  {
+    "step": 1050,
+    "status": "warning",
+    "confidence": 0.5,
+    "reasoning": "Failed to parse agent response: {\n    \"status\": \"warning\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"Epoch 3.725, step 1050. We are not in the early phase. \n    eval_loss_consecutive_increases: 1 CROSSED threshold of >= 3 (consecutive increases at end is 1, but we need >= 3)\n    eval_loss_rise: 0.0108 CROSSED threshold of > 0.15 (rise from minimum is 0.0108, which is above the threshold)\n    margin_latest: 2.8823 NOT CROSSED threshold of > 3.0\n    margin_velocity_last10: -0.2912 NOT CROSSED threshold of >= 1.0\n    accuracy_late",
+    "detected_issues": [
+      "Agent response parsing failed"
+    ],
+    "recommendation": "Manual review recommended",
+    "stop_reason": "",
+    "ignored_stop": true,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.8378386497497559,
+        0.8444851636886597,
+        0.8360848426818848,
+        0.8468548059463501
+      ],
+      "eval_loss_min": 0.8361,
+      "eval_loss_latest": 0.8469,
+      "eval_loss_rise": 0.0108,
+      "eval_loss_consecutive_increases": 1,
+      "train_loss_latest": 0.1605,
+      "train_eval_gap": 0.6863,
+      "current_step": 1050,
+      "current_epoch": 3.725
+    }
+  },
+  {
+    "step": 1100,
+    "status": "warning",
+    "confidence": 0.8,
+    "reasoning": "Epoch 3.903, step 1100. In the early phase, eval loss is fluctuating slightly. Checking thresholds: eval_loss_rise is 0.0204, which is below the 0.15 threshold. eval_loss_consecutive_increases is 2, which is below the 3 threshold. train_loss_latest is 0.1192, which is above the 0.15 threshold. train_eval_gap is 0.7373, which is above the 0.3 threshold. margin_latest is not provided, but margin_velocity_last10 is not provided either. accuracy_latest is not provided. chosen_latest and rejected_latest are not provided. Loss is not NaN. Therefore, the detected issues are: eval_loss_rise: 0.0204 CROSSED 0.15-above-minimum threshold (min was 0.8361), train_eval_gap: 0.7373 CROSSED 0.3 threshold.",
+    "detected_issues": [
+      "eval_loss_rise: 0.0204 CROSSED 0.15-above-minimum threshold (min was 0.8361)",
+      "train_eval_gap: 0.7373 CROSSED 0.3 threshold"
+    ],
+    "recommendation": "Continue training with caution.",
+    "stop_reason": "",
+    "ignored_stop": true,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.8444851636886597,
+        0.8360848426818848,
+        0.8468548059463501,
+        0.8564382195472717
+      ],
+      "eval_loss_min": 0.8361,
+      "eval_loss_latest": 0.8564,
+      "eval_loss_rise": 0.0204,
+      "eval_loss_consecutive_increases": 2,
+      "train_loss_latest": 0.1192,
+      "train_eval_gap": 0.7373,
+      "current_step": 1100,
+      "current_epoch": 3.903
+    }
+  },
+  {
+    "step": 1150,
+    "status": "warning",
+    "confidence": 0.5,
+    "reasoning": "Failed to parse agent response: {\n    \"status\": \"stop\",\n    \"confidence\": 1.0,\n    \"reasoning\": \"Epoch 4.078, step 1150. We are no longer in the early phase. \n    eval_loss_consecutive_increases: 3 CROSSED threshold of >= 3 (stop threshold)\n    eval_loss_rise: 0.0309 CROSSED threshold of > 0.15 (stop threshold)\n    margin_latest: not provided, but not needed as eval_loss_rise already triggered stop\n    margin_velocity_last10: not provided, but not needed as eval_loss_rise already triggered stop\n    accuracy_latest: not provide",
+    "detected_issues": [
+      "Agent response parsing failed"
+    ],
+    "recommendation": "Manual review recommended",
+    "stop_reason": "",
+    "ignored_stop": true,
+    "precomputed_stats": {
+      "eval_loss_values": [
+        0.8360848426818848,
+        0.8468548059463501,
+        0.8564382195472717,
+        0.8669502139091492
+      ],
+      "eval_loss_min": 0.8361,
+      "eval_loss_latest": 0.867,
+      "eval_loss_rise": 0.0309,
+      "eval_loss_consecutive_increases": 3,
+      "train_loss_latest": 0.1183,
+      "train_eval_gap": 0.7486,
+      "current_step": 1150,
+      "current_epoch": 4.078
+    }
+  }
+]

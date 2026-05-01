@@ -1,0 +1,43 @@
+# DPO Training Configuration — Qwen2.5-0.5B Experiment
+# Second experiment to test agent generalization across models
+
+model:
+  name: "Qwen/Qwen2.5-0.5B-Instruct"  # "HuggingFaceTB/SmolLM2-1.7B" for small model with no model collapse
+  use_peft: true
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lora_target_modules: ["q_proj", "v_proj", "k_proj", "o_proj"]
+
+dataset:
+  name: "trl-lib/ultrafeedback_binarized"
+  max_samples: 5000
+  max_length: 512
+
+training:
+  num_train_epochs: 3      # Intentionally high to capture overfitting
+  learning_rate: 5.0e-5
+  per_device_train_batch_size: 4
+  max_length: 512 
+  gradient_accumulation_steps: 4
+  beta: 0.1
+  warmup_ratio: 0.1
+  lr_scheduler_type: "cosine"
+  bf16: true
+  output_dir: "./outputs_qwen"
+  save_strategy: "steps"
+  save_steps: 50
+  
+logging:
+  log_every_n_steps: 10
+  log_file: "./logs/training_run_qwen.jsonl"
+  eval_every_n_steps: 50
+  eval_samples: 200
+
+# Agent monitoring settings
+agent:
+  enabled: false
+  check_every_n_steps: 50
+  api_base_url: "https://api.groq.com/openai/v1"
+  model: "llama-3.3-70b-versatile"
+  window_size: 20

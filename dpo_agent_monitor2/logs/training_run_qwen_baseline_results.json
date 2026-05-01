@@ -1,0 +1,67 @@
+[
+  {
+    "baseline": "no_stopping",
+    "stop_step": null,
+    "reason": "No early stopping applied \u2014 trained to completion"
+  },
+  {
+    "baseline": "eval_loss_patience_3",
+    "stop_step": 450,
+    "reason": "Eval loss increased for 3 consecutive checks. Best eval loss: 0.6244, current: 0.6336"
+  },
+  {
+    "baseline": "eval_loss_patience_5",
+    "stop_step": 550,
+    "reason": "Eval loss increased for 5 consecutive checks. Best eval loss: 0.6244, current: 0.6270"
+  },
+  {
+    "baseline": "margin_threshold_3.0",
+    "stop_step": null,
+    "reason": "Reward margin never exceeded 3.0"
+  },
+  {
+    "baseline": "margin_threshold_5.0",
+    "stop_step": null,
+    "reason": "Reward margin never exceeded 5.0"
+  },
+  {
+    "baseline": "acc_saturation_0.95",
+    "stop_step": null,
+    "reason": "Reward accuracy never saturated at 0.95 for 5 steps"
+  },
+  {
+    "baseline": "acc_saturation_0.98",
+    "stop_step": null,
+    "reason": "Reward accuracy never saturated at 0.98 for 3 steps"
+  },
+  {
+    "baseline": "loss_plateau_w10",
+    "stop_step": 230,
+    "reason": "Loss improvement over last 10 entries: -0.019216 (below threshold 0.001)"
+  },
+  {
+    "baseline": "train_eval_divergence_0.3",
+    "stop_step": null,
+    "reason": "Train-eval divergence never exceeded 0.3"
+  },
+  {
+    "baseline": "train_eval_divergence_0.5",
+    "stop_step": null,
+    "reason": "Train-eval divergence never exceeded 0.5"
+  },
+  {
+    "baseline": "combined_heuristic",
+    "stop_step": 650,
+    "reason": "Multiple signals triggered: eval_loss rising for 7 checks; train-eval gap=0.220 > 0.2"
+  },
+  {
+    "baseline": "ema_eval_loss_a0.3_p3",
+    "stop_step": 750,
+    "reason": "EMA of eval loss rising for 3 consecutive checks. EMA: 0.6325 \u2192 0.6353"
+  },
+  {
+    "baseline": "ema_eval_loss_a0.5_p3",
+    "stop_step": 700,
+    "reason": "EMA of eval loss rising for 3 consecutive checks. EMA: 0.6295 \u2192 0.6351"
+  }
+]

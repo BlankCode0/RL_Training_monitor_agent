@@ -1,0 +1,68 @@
+[
+  {
+    "step": 50,
+    "status": "healthy",
+    "confidence": 0.9,
+    "reasoning": "We are in the early phase of training (steps 10-50, epochs 0.02-0.09), where high and rapidly dropping loss, small and growing margin, and climbing reward accuracy are normal. The loss is high but decreasing, the margin is small but growing, and the reward accuracy is climbing from 45% toward 60%. The recent trends show a slight decrease in loss, a small increase in margin, and an increase in accuracy.",
+    "detected_issues": [],
+    "recommendation": "Continue training and monitor the metrics for any signs of overfitting or divergence.",
+    "stop_reason": null
+  },
+  {
+    "step": 100,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are in the early phase of training (first 100 steps, roughly 0.18 epochs), so we are lenient with the metrics. The loss is high and dropping rapidly, which is normal. The eval loss is only available at step 50, but it is stable. The reward margin is small but growing, and the reward accuracy is climbing from 0.45 to 0.6125, which is normal progress. The chosen and rejected rewards are near zero and starting to separate, which is also normal.",
+    "detected_issues": [],
+    "recommendation": "Continue training and monitor the metrics for any signs of overfitting or divergence.",
+    "stop_reason": null
+  },
+  {
+    "step": 150,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are currently at step 150, which is within the early training phase. The loss is decreasing rapidly from 0.6917 to 0.6290, and the eval loss is stable at around 0.6648 and 0.6912. The reward margin is small but growing from 0.0033 to 0.1976, and the reward accuracy is climbing from 45.00% to 52.50%. Both chosen and rejected rewards are near zero and starting to separate. Given that we are still in the early phase, these trends are normal and not indicative of any issues.",
+    "detected_issues": [],
+    "recommendation": "Continue training and monitor the metrics for any signs of overfitting or divergence.",
+    "stop_reason": null
+  },
+  {
+    "step": 200,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are currently at step 200, which is past the early phase. The train loss has stabilized and is decreasing slowly, with a current value of 0.6326. The eval loss is not consistently available, but the last eval loss was 0.6471, which is not significantly higher than the train loss. The reward margin is moderate, ranging from 0.17 to 0.29 in the last few steps, with a current value of 0.2847. The reward accuracy has stabilized between 0.52 and 0.65, with a current value of 0.525. Both chosen and rejected rewards are within a reasonable range, with current values of -0.5621 and -0.8468, respectively.",
+    "detected_issues": [],
+    "recommendation": "Continue training and monitor the metrics for any signs of overfitting or divergence.",
+    "stop_reason": null
+  },
+  {
+    "step": 250,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are currently at step 250, which is still within the early training phase. The loss is decreasing overall, with some fluctuations. The reward margin is small but growing, and the reward accuracy is climbing. The eval loss is stable, with values of 0.6648, 0.6471, and 0.6303, which do not indicate overfitting. The train and eval metrics are not diverging significantly.",
+    "detected_issues": [],
+    "recommendation": "Continue training and monitor the metrics for any signs of overfitting or divergence.",
+    "stop_reason": null
+  },
+  {
+    "step": 300,
+    "status": "healthy",
+    "confidence": 0.8,
+    "reasoning": "We are currently at epoch 0.53, which is still within the early training phase. The train loss is decreasing, and the eval loss is stable. The reward margin is increasing but still within a moderate range. The reward accuracy is also increasing but has not exceeded the threshold of 0.85. No divergence between train and eval metrics is observed.",
+    "detected_issues": [],
+    "recommendation": "Continue training and monitor the metrics for any signs of overfitting or divergence.",
+    "stop_reason": null
+  },
+  {
+    "step": 350,
+    "status": "stop",
+    "confidence": 0.9,
+    "reasoning": "We are past the early training phase (first 1-1.5 epochs, roughly first 400 steps), currently at epoch 0.62. The eval loss has increased for 3 consecutive checks, which is a critical indicator for stopping the training. The recent trends also show an increasing loss and a decreasing margin, which are not desirable. The reward accuracy has stabilized but the eval loss trend is the primary concern here.",
+    "detected_issues": [
+      "eval_loss rose from 0.6303 to 0.6422",
+      "eval_loss increasing for 3 consecutive checks"
+    ],
+    "recommendation": "Stop the training to prevent overfitting and evaluate the model's performance on the validation set.",
+    "stop_reason": "Eval loss has increased for 3 or more consecutive eval checks"
+  }
+]

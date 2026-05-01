@@ -1,0 +1,5 @@
+{
+  "step": 690,
+  "reason": "Model not learning, likely due to catastrophic failure or incorrect model configuration",
+  "triggered_by": "agent"
+}
